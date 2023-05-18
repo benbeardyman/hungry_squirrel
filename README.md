@@ -20,7 +20,7 @@ npm i
 npm start
 ```
 
-### Server
+### Server:
 
 to create and seed database:
 
