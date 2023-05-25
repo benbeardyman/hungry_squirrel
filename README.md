@@ -26,5 +26,5 @@ to create and seed database:
 
 #### In terminal
 ```
-createdb solo_service
+createdb HungrySquirrelDb
 ```
