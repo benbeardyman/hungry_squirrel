@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/Users/benbarlow/projects/hungry_squirrel/Server/Server.csproj": {}
+    "/Users/benbarlow/projects/hungry_squirrel/server/server.csproj": {}
   },
   "projects": {
-    "/Users/benbarlow/projects/hungry_squirrel/Server/Server.csproj": {
+    "/Users/benbarlow/projects/hungry_squirrel/server/server.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/benbarlow/projects/hungry_squirrel/Server/Server.csproj",
-        "projectName": "Server",
-        "projectPath": "/Users/benbarlow/projects/hungry_squirrel/Server/Server.csproj",
+        "projectUniqueName": "/Users/benbarlow/projects/hungry_squirrel/server/server.csproj",
+        "projectName": "server",
+        "projectPath": "/Users/benbarlow/projects/hungry_squirrel/server/server.csproj",
         "packagesPath": "/Users/benbarlow/.nuget/packages/",
-        "outputPath": "/Users/benbarlow/projects/hungry_squirrel/Server/obj/",
+        "outputPath": "/Users/benbarlow/projects/hungry_squirrel/server/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/Users/benbarlow/.nuget/NuGet/NuGet.Config"

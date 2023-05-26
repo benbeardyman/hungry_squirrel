@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "RbhFbs6vbLmP9UznKsNFuOLUc1xQTdXRtK+SOFw228TdClplVX+Yq2fXPK7yv3axSTEo+MyPAaqWxHq2tIQHBw==",
+  "dgSpecHash": "+dkXKJRLnJeR+LRfIw1YuFiKCToIcTSX8U+zwGFgEfgaef85OTJurukWpdAHAY3O8Et3TW0LxPdg5GgdWPb7wg==",
   "success": true,
-  "projectFilePath": "/Users/benbarlow/projects/hungry_squirrel/Server/Server.csproj",
+  "projectFilePath": "/Users/benbarlow/projects/hungry_squirrel/server/server.csproj",
   "expectedPackageFiles": [
     "/Users/benbarlow/.nuget/packages/humanizer.core/2.14.1/humanizer.core.2.14.1.nupkg.sha512",
     "/Users/benbarlow/.nuget/packages/microsoft.aspnetcore.openapi/7.0.5/microsoft.aspnetcore.openapi.7.0.5.nupkg.sha512",

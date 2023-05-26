@@ -1,5 +1,5 @@
 global using Microsoft.EntityFrameworkCore;
-global using Server.Data;
+global using server.Data;
 
 var builder = WebApplication.CreateBuilder(args);
 

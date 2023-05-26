@@ -1,11 +1,13 @@
-using Microsoft.EntityFrameworkCore;
 
-namespace Server.Data
+
+namespace server.Data
 {
-    public class DataContext : DbContext
+    public class DataContext: DbContext
     {
         public DataContext(DbContextOptions<DataContext> options) : base(options)
         {
+            
         }
     }
+
 }
