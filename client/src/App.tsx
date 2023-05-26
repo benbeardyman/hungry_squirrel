@@ -1,13 +1,10 @@
-import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import MainContainer from './containers/Main_Container';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        Hello World!
-      </header>
+      <MainContainer/>
     </div>
   );
 }
