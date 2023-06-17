@@ -4,7 +4,7 @@ const MainContainer = () => {
     return (
         <>
             <header className="App-header">
-                <img src={logo} />
+                <img src={logo} alt="The Hungry Squirrel!"/>
                 Hello Hungry Squirrel! What can we get you for dinner?
             </header>
         </>
