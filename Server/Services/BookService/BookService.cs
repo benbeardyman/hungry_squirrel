@@ -13,24 +13,24 @@ namespace server.Services.BookService
             new Book { Id = 1, Title= "Vegan Pizza" }
         };
 
-        public async Task<ServiceResponse<List<Book>>> AddBook(Book newBook)
+        public async Task<ServiceResponse<List<GetBookDto>>> AddBook(AddBookDto newBook)
         {
-            var serviceResponse = new ServiceResponse<List<Book>>();
+            var serviceResponse = new ServiceResponse<List<GetBookDto>>();
             books.Add(newBook);
             serviceResponse.Data = books;
             return serviceResponse;
         }
 
-        public async Task<ServiceResponse<List<Book>>> GetAllBooks()
+        public async Task<ServiceResponse<List<GetBookDto>>> GetAllBooks()
         {
-            var serviceResponse = new ServiceResponse<List<Book>>();
+            var serviceResponse = new ServiceResponse<List<GetBookDto>>();
             serviceResponse.Data = books;
             return serviceResponse;
         }
 
-        public async Task<ServiceResponse<Book>> GetBookById(int id)
+        public async Task<ServiceResponse<GetBookDto>> GetBookById(int id)
         {
-            var serviceResponse = new ServiceResponse<Book>();
+            var serviceResponse = new ServiceResponse<GetBookDto>();
             var book = books.FirstOrDefault(book => book.Id == id);
             serviceResponse.Data = book;
             return serviceResponse;

@@ -3,6 +3,8 @@ global using server.Data;
 global using Microsoft.AspNetCore.Mvc;
 global using server.Models;
 global using server.Services.BookService;
+global using server.Dtos.Book;
+
 
 var builder = WebApplication.CreateBuilder(args);
 
