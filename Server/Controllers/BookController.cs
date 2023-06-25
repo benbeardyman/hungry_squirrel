@@ -11,8 +11,8 @@ namespace server.Controllers
     public class BookController : ControllerBase
     {
         private static List<Book> books = new List<Book> {
-            new Book { Title= "Artisan Pizza"},
-            new Book { Title= "Vegan Pizza"}
+            new Book { Title = "Artisan Pizza" },
+            new Book { Id = 1, Title= "Vegan Pizza" }
         };
 
         [HttpGet("GetAll")]
@@ -21,10 +21,10 @@ namespace server.Controllers
             return Ok(books);
         }
 
-        [HttpGet]
-        public ActionResult<Book> GetSingleBook() 
+        [HttpGet("{id}")]
+        public ActionResult<Book> GetBookById(int id) 
         {
-            return Ok(books[0]);
+            return Ok(books.FirstOrDefault(book => book.Id == id));
         }
     }
 }
