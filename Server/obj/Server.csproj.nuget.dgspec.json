@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/Users/benbarlow/projects/hungry_squirrel/server/server.csproj": {}
+    "/Users/benbarlow/projects/hungry_squirrel/hungry_squirrel_app/server/server.csproj": {}
   },
   "projects": {
-    "/Users/benbarlow/projects/hungry_squirrel/server/server.csproj": {
+    "/Users/benbarlow/projects/hungry_squirrel/hungry_squirrel_app/server/server.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/benbarlow/projects/hungry_squirrel/server/server.csproj",
+        "projectUniqueName": "/Users/benbarlow/projects/hungry_squirrel/hungry_squirrel_app/server/server.csproj",
         "projectName": "server",
-        "projectPath": "/Users/benbarlow/projects/hungry_squirrel/server/server.csproj",
+        "projectPath": "/Users/benbarlow/projects/hungry_squirrel/hungry_squirrel_app/server/server.csproj",
         "packagesPath": "/Users/benbarlow/.nuget/packages/",
-        "outputPath": "/Users/benbarlow/projects/hungry_squirrel/server/obj/",
+        "outputPath": "/Users/benbarlow/projects/hungry_squirrel/hungry_squirrel_app/server/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/Users/benbarlow/.nuget/NuGet/NuGet.Config"
@@ -50,6 +50,8 @@
               "version": "[7.0.5, )"
             },
             "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
               "target": "Package",
               "version": "[7.0.5, )"
             },
