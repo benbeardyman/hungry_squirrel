@@ -10,21 +10,29 @@ namespace server.Controllers
     [Route("api/[controller]")]
     public class BookController : ControllerBase
     {
-        private static List<Book> books = new List<Book> {
-            new Book { Title = "Artisan Pizza" },
-            new Book { Id = 1, Title= "Vegan Pizza" }
-        };
+        private readonly IBookService bookService;
+
+        public BookController(IBookService bookService)
+        {
+            this.bookService = bookService;
+        }
 
         [HttpGet("GetAll")]
         public ActionResult<List<Book>> Get() 
         {
-            return Ok(books);
+            return Ok(bookService.GetAllBooks);
         }
 
         [HttpGet("{id}")]
         public ActionResult<Book> GetBookById(int id) 
         {
-            return Ok(books.FirstOrDefault(book => book.Id == id));
+            return Ok(bookService.GetBookById(id));
+        }
+
+        [HttpPost]
+        public ActionResult<List<Book>> AddBook(Book newBook)
+        {
+            return Ok(bookService.AddBook(newBook));
         }
     }
 }
