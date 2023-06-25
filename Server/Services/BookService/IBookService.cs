@@ -7,8 +7,8 @@ namespace server.Services.BookService
 {
     public interface IBookService
     {
-        List<Book> GetAllBooks();
-        Book GetBookById(int id);
-        List<Book> AddBook(Book newBook);
+        Task<List<Book>> GetAllBooks();
+        Task<Book> GetBookById(int id);
+        Task<List<Book>> AddBook(Book newBook);
     }
 }

@@ -13,23 +13,23 @@ namespace server.Services.BookService
             new Book { Id = 1, Title= "Vegan Pizza" }
         };
 
-        public List<Book> AddBook(Book newBook)
+        public async Task<List<Book>> AddBook(Book newBook)
         {
             books.Add(newBook);
             return books;
         }
 
-        public List<Book> GetAllBooks()
+        public async Task<List<Book>> GetAllBooks()
         {
             return books;
         }
 
-        public Book GetBookById(int id)
+        public async Task<Book> GetBookById(int id)
         {
             var book = books.FirstOrDefault(book => book.Id == id);
             if (book is not null)
                 return book;
-                
+
             throw new Exception("Book not found");
         }
     }
