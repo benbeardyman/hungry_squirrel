@@ -1,5 +1,7 @@
 global using Microsoft.EntityFrameworkCore;
 global using server.Data;
+global using Microsoft.AspNetCore.Mvc;
+global using server.Models;
 
 var builder = WebApplication.CreateBuilder(args);
 
