@@ -12,19 +12,27 @@ namespace server.Services.BookService
             new Book { Title = "Artisan Pizza" },
             new Book { Id = 1, Title= "Vegan Pizza" }
         };
+        private readonly IMapper mapper;
+
+        public BookService(IMapper mapper)
+        {
+            this.mapper = mapper;
+        }
 
         public async Task<ServiceResponse<List<GetBookDto>>> AddBook(AddBookDto newBook)
         {
             var serviceResponse = new ServiceResponse<List<GetBookDto>>();
-            books.Add(newBook);
-            serviceResponse.Data = books;
+            var book = mapper.Map<Book>(newBook);
+            book.Id = books.Max(book => book.Id) + 1;
+            books.Add(book);
+            serviceResponse.Data = books.Select(book => mapper.Map<GetBookDto>(book)).ToList();
             return serviceResponse;
         }
 
         public async Task<ServiceResponse<List<GetBookDto>>> GetAllBooks()
         {
             var serviceResponse = new ServiceResponse<List<GetBookDto>>();
-            serviceResponse.Data = books;
+            serviceResponse.Data = books.Select(book => mapper.Map<GetBookDto>(book)).ToList();
             return serviceResponse;
         }
 
@@ -32,7 +40,7 @@ namespace server.Services.BookService
         {
             var serviceResponse = new ServiceResponse<GetBookDto>();
             var book = books.FirstOrDefault(book => book.Id == id);
-            serviceResponse.Data = book;
+            serviceResponse.Data = mapper.Map<GetBookDto>(book);
             return serviceResponse;
         }
     }
