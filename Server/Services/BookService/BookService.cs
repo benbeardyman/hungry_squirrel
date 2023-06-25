@@ -12,7 +12,7 @@ namespace server.Services.BookService
             new Book { Title = "Artisan Pizza" },
             new Book { Id = 1, Title= "Vegan Pizza" }
         };
-        
+
         public List<Book> AddBook(Book newBook)
         {
             books.Add(newBook);
@@ -26,7 +26,11 @@ namespace server.Services.BookService
 
         public Book GetBookById(int id)
         {
-            return books.FirstOrDefault(book => book.Id == id);
+            var book = books.FirstOrDefault(book => book.Id == id);
+            if (book is not null)
+                return book;
+                
+            throw new Exception("Book not found");
         }
     }
 }
