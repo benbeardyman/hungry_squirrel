@@ -13,24 +13,27 @@ namespace server.Services.BookService
             new Book { Id = 1, Title= "Vegan Pizza" }
         };
 
-        public async Task<List<Book>> AddBook(Book newBook)
+        public async Task<ServiceResponse<List<Book>>> AddBook(Book newBook)
         {
+            var serviceResponse = new ServiceResponse<List<Book>>();
             books.Add(newBook);
-            return books;
+            serviceResponse.Data = books;
+            return serviceResponse;
         }
 
-        public async Task<List<Book>> GetAllBooks()
+        public async Task<ServiceResponse<List<Book>>> GetAllBooks()
         {
-            return books;
+            var serviceResponse = new ServiceResponse<List<Book>>();
+            serviceResponse.Data = books;
+            return serviceResponse;
         }
 
-        public async Task<Book> GetBookById(int id)
+        public async Task<ServiceResponse<Book>> GetBookById(int id)
         {
+            var serviceResponse = new ServiceResponse<Book>();
             var book = books.FirstOrDefault(book => book.Id == id);
-            if (book is not null)
-                return book;
-
-            throw new Exception("Book not found");
+            serviceResponse.Data = book;
+            return serviceResponse;
         }
     }
 }

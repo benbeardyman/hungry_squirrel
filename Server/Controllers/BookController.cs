@@ -18,19 +18,19 @@ namespace server.Controllers
         }
 
         [HttpGet("GetAll")]
-        public async Task<ActionResult<List<Book>>> Get() 
+        public async Task<ActionResult<ServiceResponse<List<Book>>>> Get() 
         {
             return Ok(await bookService.GetAllBooks());
         }
 
         [HttpGet("{id}")]
-        public async Task<ActionResult<Book>> GetBookById(int id) 
+        public async Task<ActionResult<ServiceResponse<Book>>> GetBookById(int id) 
         {
             return Ok(await bookService.GetBookById(id));
         }
 
         [HttpPost]
-        public async Task<ActionResult<List<Book>>> AddBook(Book newBook)
+        public async Task<ActionResult<ServiceResponse<List<Book>>>> AddBook(Book newBook)
         {
             return Ok(await bookService.AddBook(newBook));
         }
