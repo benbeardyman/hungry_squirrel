@@ -22,9 +22,14 @@ npm start
 
 ### Server:
 
-to create and seed database:
-
 #### In terminal
+
+to enable EF globally
+```
+dotnet tool install --global dotnet-ef
+```
+
+to create database and tables:
 ```
 createdb HungrySquirrelDb
 ```
