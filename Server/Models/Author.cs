@@ -5,14 +5,13 @@ using System.Threading.Tasks;
 
 namespace server.Models
 {
-    public class Book
+    public class Author
     {
         public int Id { get; set; }
-        public string Title { get; set; } = "";
-        public string Desctiption { get; set; } = "";
-        public int Pages { get; set; }
+        public string FirstName { get; set; } = "";
+        public string LastName { get; set; } = "";
         public string ImageUrl { get; set; } = "";
         public string Url { get; set; } = "";
-        public List<Author>? Authors { get; set; }
+        public List<Book>? Books { get; set; }
     }
 }
