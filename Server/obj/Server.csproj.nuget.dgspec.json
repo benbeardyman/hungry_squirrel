@@ -1,15 +1,15 @@
 {
   "format": 1,
   "restore": {
-    "/Users/benbarlow/projects/hungry_squirrel/hungry_squirrel_app/server/server.csproj": {}
+    "/Users/benbarlow/projects/hungry_squirrel/hungry_squirrel_app/server/Server.csproj": {}
   },
   "projects": {
-    "/Users/benbarlow/projects/hungry_squirrel/hungry_squirrel_app/server/server.csproj": {
+    "/Users/benbarlow/projects/hungry_squirrel/hungry_squirrel_app/server/Server.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/benbarlow/projects/hungry_squirrel/hungry_squirrel_app/server/server.csproj",
-        "projectName": "server",
-        "projectPath": "/Users/benbarlow/projects/hungry_squirrel/hungry_squirrel_app/server/server.csproj",
+        "projectUniqueName": "/Users/benbarlow/projects/hungry_squirrel/hungry_squirrel_app/server/Server.csproj",
+        "projectName": "Server",
+        "projectPath": "/Users/benbarlow/projects/hungry_squirrel/hungry_squirrel_app/server/Server.csproj",
         "packagesPath": "/Users/benbarlow/.nuget/packages/",
         "outputPath": "/Users/benbarlow/projects/hungry_squirrel/hungry_squirrel_app/server/obj/",
         "projectStyle": "PackageReference",
