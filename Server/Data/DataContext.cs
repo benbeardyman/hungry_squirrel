@@ -8,6 +8,8 @@ namespace server.Data
         {
             
         }
+
+        public DbSet<Book> Books => Set<Book>();
     }
 
 }
