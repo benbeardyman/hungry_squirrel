@@ -17,7 +17,7 @@ Navigate to the project root folder then:
 ```
 cd client
 npm i
-npm start
+npm run dev
 ```
 
 ### Server:
