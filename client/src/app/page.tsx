@@ -1,11 +1,15 @@
-import Image from "next/image";
-import logo from "public/images/hs_logo.png";
+import Image from 'next/image';
+import logo from 'public/images/hs_logo.png';
+
+const name = 'ben';
 
 export default function Home() {
   return (
-    <header className="flex gap-1 flex-col items-center justify-center">
-      <Image src={logo} alt={""} />
-      <h1>Hello hungry squirrel, what can we feed you tonight?</h1>
+    <header className='flex gap-1 flex-col items-center justify-center h-screen'>
+      <Image src={logo} alt={''} />
+      <h1 className='text-xl'>
+        Hello hungry squirrel, what can we feed you tonight?
+      </h1>
     </header>
   );
 }
