@@ -7,8 +7,8 @@ export default function Picker() {
         <h1>Picker</h1>
       </header>
       <div className='flex justify-center'>
-        <Link href='/' className='border px-2 py-1 rounded'>
-          Home
+        <Link href='/books' className='border px-2 py-1 rounded'>
+          All Books
         </Link>
       </div>
     </>
