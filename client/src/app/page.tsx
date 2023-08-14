@@ -10,7 +10,7 @@ export default function Home() {
       <Image src={logo} alt={''} />
       <h1 className='text-xl'>
         Hello hungry squirrel, what can we feed you{' '}
-        <Link href='/picker'>tonight?</Link>
+        <Link href='/home'>tonight?</Link>
       </h1>
     </header>
   );
