@@ -28,19 +28,19 @@ export default function Catalogue() {
       <div className='flex justify-center gap-2 mt-4'>
         <Link
           href='/home'
-          className='border-2 border-slate-800 dark:border-slate-100 px-2 py-1 rounded'
+          className='border-2 border-slate-800 dark:border-slate-100 px-2 py-1 rounded-lg'
         >
           Home
         </Link>
         <Link
           href='/books'
-          className='border-2 border-slate-800 dark:border-slate-100 px-2 py-1 rounded'
+          className='border-2 border-slate-800 dark:border-slate-100 px-2 py-1 rounded-lg'
         >
           All Books
         </Link>
         <Link
           href='/books/add_book'
-          className='border-2 border-slate-800 dark:border-slate-100 px-2 py-1 rounded'
+          className='border-2 border-slate-800 dark:border-slate-100 px-2 py-1 rounded-lg'
         >
           Add Book
         </Link>
