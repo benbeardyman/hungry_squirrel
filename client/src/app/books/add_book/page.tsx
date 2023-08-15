@@ -7,13 +7,11 @@ export default function AddBook() {
   const [val, setVal] = useState('');
   const [textarea, setTextarea] = useState('');
 
-  const handleDescriptionChange = (
-    e: React.ChangeEvent<HTMLTextAreaElement>,
-  ) => {
+  const handleDescriptionChange = (e: any) => {
     setTextarea(e.target.value);
   };
 
-  const handlePagesChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+  const handlePagesChange = (e: any) => {
     const inputValue = e.target.value;
     if (/^\d{0,4}$/.test(inputValue)) {
       setVal(inputValue);
