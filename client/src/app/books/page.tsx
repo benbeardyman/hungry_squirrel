@@ -26,13 +26,23 @@ export default function Catalogue() {
 
   return (
     <>
-      <header className='flex gap-2'>
+      <header className='flex justify-center text-5xl'>
         <h1>All Books</h1>
-        <Link href='/home' className='border px-2 py-1 rounded'>
+      </header>
+      <div className='flex justify-center gap-2 mt-4'>
+        <Link
+          href='/home'
+          className='border-2 border-slate-800 dark:border-slate-100 px-2 py-1 rounded'
+        >
           Home
         </Link>
-      </header>
-
+        <Link
+          href='/books/add_book'
+          className='border-2 border-slate-800 dark:border-slate-100 px-2 py-1 rounded'
+        >
+          Add Book
+        </Link>
+      </div>
       <div>
         <ul>
           {books.map((book) => (
