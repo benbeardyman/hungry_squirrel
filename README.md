@@ -33,3 +33,8 @@ to create database and tables:
 ```
 createdb HungrySquirrelDb
 ```
+
+to run server
+```
+dotnet run
+```
