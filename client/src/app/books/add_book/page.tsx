@@ -5,6 +5,11 @@ import { useState } from 'react';
 
 export default function AddBook() {
   const [val, setVal] = useState('');
+  const [textarea, setTextarea] = useState('');
+
+  const handleDescriptionChange = (event) => {
+    setTextarea(event.target.value);
+  };
 
   const handlePagesChange = (e) => {
     const inputValue = e.target.value;
@@ -33,17 +38,17 @@ export default function AddBook() {
         <h1>Add Book</h1>
       </header>
       <div className='flex justify-center'>
-        <form className='flex gap-2 flex-col mt-6 w-1/2'>
+        <form className='flex gap-2 flex-col mt-6 w-1/4'>
           <input
             type='text'
             name='title'
             placeholder='Title'
             className='border-2 border-slate-800 dark:border-slate-100 bg-transparent px-2 py-1 rounded outline-none focus-within:border-slate-200'
           />
-          <input
-            type='text'
-            name='description'
+          <textarea
+            value={textarea}
             placeholder='Description'
+            onChange={handleDescriptionChange}
             className='border-2 border-slate-800 dark:border-slate-100 bg-transparent px-2 py-1 rounded outline-none focus-within:border-slate-200'
           />
           <input
