@@ -23,13 +23,13 @@ export default function AddBook() {
       <div className='flex justify-center gap-2 mt-4'>
         <Link
           href='/home'
-          className='border-2 border-slate-800 dark:border-slate-100 px-2 py-1 rounded'
+          className='border-2 border-slate-800 dark:border-slate-100 px-2 py-1 rounded-lg'
         >
           Home
         </Link>
         <Link
           href='/books'
-          className='border-2 border-slate-800 dark:border-slate-100 px-2 py-1 rounded'
+          className='border-2 border-slate-800 dark:border-slate-100 px-2 py-1 rounded-lg'
         >
           All Books
         </Link>
@@ -43,13 +43,13 @@ export default function AddBook() {
             type='text'
             name='title'
             placeholder='Title'
-            className='border-2 border-slate-800 dark:border-slate-100 bg-transparent px-2 py-1 rounded outline-none focus-within:border-slate-200'
+            className='border-2 border-slate-800 dark:border-slate-100 bg-transparent px-2 py-1 rounded-lg outline-none focus-within:border-slate-200'
           />
           <textarea
             value={textarea}
             placeholder='Description'
             onChange={handleDescriptionChange}
-            className='border-2 border-slate-800 dark:border-slate-100 bg-transparent px-2 py-1 rounded outline-none focus-within:border-slate-200'
+            className='border-2 border-slate-800 dark:border-slate-100 bg-transparent px-2 py-1 rounded-lg outline-none focus-within:border-slate-200'
           />
           <input
             type='text'
@@ -57,30 +57,30 @@ export default function AddBook() {
             onChange={handlePagesChange}
             name='pages'
             placeholder='Pages'
-            className='border-2 border-slate-800 dark:border-slate-100 bg-transparent px-2 py-1 rounded outline-none focus-within:border-slate-200'
+            className='border-2 border-slate-800 dark:border-slate-100 bg-transparent px-2 py-1 rounded-lg outline-none focus-within:border-slate-200'
           />
           <input
             type='text'
             name='image'
             placeholder='Image URL'
-            className='border-2 border-slate-800 dark:border-slate-100 bg-transparent px-2 py-1 rounded outline-none focus-within:border-slate-200'
+            className='border-2 border-slate-800 dark:border-slate-100 bg-transparent px-2 py-1 rounded-lg outline-none focus-within:border-slate-200'
           />
           <input
             type='text'
             name='url'
             placeholder='URL'
-            className='border-2 border-slate-800 dark:border-slate-100 bg-transparent px-2 py-1 rounded outline-none focus-within:border-slate-200'
+            className='border-2 border-slate-800 dark:border-slate-100 bg-transparent px-2 py-1 rounded-lg outline-none focus-within:border-slate-200'
           />
           <div className='flex gap-1 justify-end'>
             <Link
               href='/books'
-              className='border-2 border-slate-800 dark:border-slate-100 px-2 py-1 rounded hover:bg-slate-50 dark:hover:bg-slate-600 focus-within:bg-slate-50  dark:focus-within:bg-slate-600 outline-none'
+              className='border-2 border-slate-800 dark:border-slate-100 px-2 py-1 rounded-lg hover:bg-slate-50 dark:hover:bg-slate-600 focus-within:bg-slate-50  dark:focus-within:bg-slate-600 outline-none'
             >
               Cancel
             </Link>
             <button
               type='submit'
-              className='border-2 border-slate-800 dark:border-slate-100  px-2 py-1 rounded hover:bg-slate-50 dark:hover:bg-slate-600 focus-within:bg-slate-50  dark:focus-within:bg-slate-600 outline-none'
+              className='border-2 border-slate-800 dark:border-slate-100  px-2 py-1 rounded-lg hover:bg-slate-50 dark:hover:bg-slate-600 focus-within:bg-slate-50  dark:focus-within:bg-slate-600 outline-none'
             >
               Add
             </button>
