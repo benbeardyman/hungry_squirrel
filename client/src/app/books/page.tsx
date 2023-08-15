@@ -3,7 +3,6 @@
 import Link from 'next/link';
 import { useEffect, useState } from 'react';
 
-// Define a type or interface for the book object
 interface Book {
   id: number;
   title: string;
