@@ -7,7 +7,6 @@ import { useEffect, useState } from 'react';
 interface Book {
   id: number;
   title: string;
-  // Add other properties as needed
 }
 
 export default function Catalogue() {
