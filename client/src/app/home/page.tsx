@@ -1,6 +1,6 @@
 import Link from 'next/link';
 
-export default function Picker() {
+export default function Home() {
   return (
     <>
       <div className='flex justify-center gap-2 mt-4'>
