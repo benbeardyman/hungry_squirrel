@@ -38,18 +38,18 @@ export default function AddBook() {
         <h1>Add Book</h1>
       </header>
       <div className='flex justify-center'>
-        <form className='flex gap-2 flex-col mt-6 w-1/4'>
+        <form className='flex gap-2 flex-col w-1/2 bg-slate-700 rounded-xl p-6 mt-6'>
           <input
             type='text'
             name='title'
             placeholder='Title'
-            className='border-2 border-slate-800 dark:border-slate-100 bg-transparent px-2 py-1 rounded-lg outline-none focus-within:border-slate-200'
+            className='border-2 border-slate-800 dark:border-slate-100 bg-transparent px-2 py-1 rounded-t-xl outline-none focus-within:border-slate-200'
           />
           <textarea
             value={textarea}
             placeholder='Description'
             onChange={handleDescriptionChange}
-            className='border-2 border-slate-800 dark:border-slate-100 bg-transparent px-2 py-1 rounded-lg outline-none focus-within:border-slate-200'
+            className='border-2 border-slate-800 dark:border-slate-100 bg-transparent px-2 py-1 outline-none focus-within:border-slate-200'
           />
           <input
             type='text'
@@ -57,19 +57,19 @@ export default function AddBook() {
             onChange={handlePagesChange}
             name='pages'
             placeholder='Pages'
-            className='border-2 border-slate-800 dark:border-slate-100 bg-transparent px-2 py-1 rounded-lg outline-none focus-within:border-slate-200'
+            className='border-2 border-slate-800 dark:border-slate-100 bg-transparent px-2 py-1 outline-none focus-within:border-slate-200'
           />
           <input
             type='text'
             name='image'
             placeholder='Image URL'
-            className='border-2 border-slate-800 dark:border-slate-100 bg-transparent px-2 py-1 rounded-lg outline-none focus-within:border-slate-200'
+            className='border-2 border-slate-800 dark:border-slate-100 bg-transparent px-2 py-1 outline-none focus-within:border-slate-200'
           />
           <input
             type='text'
             name='url'
             placeholder='URL'
-            className='border-2 border-slate-800 dark:border-slate-100 bg-transparent px-2 py-1 rounded-lg outline-none focus-within:border-slate-200'
+            className='border-2 border-slate-800 dark:border-slate-100 bg-transparent px-2 py-1 rounded-b-xl outline-none focus-within:border-slate-200'
           />
           <div className='flex gap-1 justify-end'>
             <Link

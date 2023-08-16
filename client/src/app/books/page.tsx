@@ -38,22 +38,24 @@ export default function Catalogue() {
         >
           All Books
         </Link>
-        <Link
-          href='/books/add_book'
-          className='border-2 border-slate-800 dark:border-slate-100 px-2 py-1 rounded-lg'
-        >
-          Add Book
-        </Link>
       </div>
       <header className='flex justify-center text-5xl mt-6'>
         <h1>All Books</h1>
       </header>
-      <div>
-        <ul>
+      <div className='flex flex-col items-center ml-6 mt-8'>
+        <ul className='flex gap-6'>
           {books.map((book) => (
             <li key={book.id}>Name: {book.title}</li>
           ))}
         </ul>
+        <div className='mt-6'>
+          <Link
+            href='/books/add_book'
+            className='border-2 border-slate-800 dark:border-slate-100 px-2 py-1 rounded-lg'
+          >
+            Add Book
+          </Link>
+        </div>
       </div>
     </>
   );
