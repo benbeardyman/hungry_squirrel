@@ -2,7 +2,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import ThemeImage from '@/components/theme-image';
 
-export default function Home() {
+export default function Title() {
   return (
     <header className='flex gap-1 flex-col items-center justify-center h-screen'>
       <ThemeImage
