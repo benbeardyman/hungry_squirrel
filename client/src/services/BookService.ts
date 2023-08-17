@@ -1,3 +1,11 @@
+interface Book {
+  title: string;
+  description: string;
+  pages: number;
+  imageUrl: string;
+  url: string;
+}
+
 export const getBooks = async function () {
   try {
     const res = await fetch('http://localhost:5172/api/Book/GetAll');
@@ -11,13 +19,13 @@ export const getBooks = async function () {
   }
 };
 
-export const addBook = async function () {
+export const addBook = async function (book: Book) {
   try {
-    const res = await fetch('http://localhost:5172/api/Book/GetAll', {
+    const res = await fetch('http://localhost:5172/api/Book', {
       method: 'POST',
-      body: JSON.stringify(event),
+      body: JSON.stringify(book),
       headers: {
-        Accept: 'applicastion/json',
+        Accept: 'application/json',
         'Content-Type': 'application/json',
       },
     });

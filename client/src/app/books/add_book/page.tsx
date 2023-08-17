@@ -1,21 +1,49 @@
 'use client';
 
 import Link from 'next/link';
-import { useState } from 'react';
+import { ChangeEvent, useState } from 'react';
+import { addBook } from '@/services/BookService';
 
 export default function AddBook() {
-  const [val, setVal] = useState('');
-  const [textarea, setTextarea] = useState('');
+  const [title, setTitle] = useState('');
+  const [description, setDescription] = useState('');
+  const [pages, setPages] = useState(0);
+  const [imageUrl, setImageUrl] = useState('');
+  const [url, setUrl] = useState('');
 
-  const handleDescriptionChange = (e: any) => {
-    setTextarea(e.target.value);
+  const handleFormSubmit = (e: React.FormEvent) => {
+    // e.preventDefault();
+    const newBook = {
+      title,
+      description,
+      pages,
+      imageUrl,
+      url,
+    };
+    addBook(newBook);
+    // console.log(newBook);
   };
 
-  const handlePagesChange = (e: any) => {
-    const inputValue = e.target.value;
-    if (/^\d{0,4}$/.test(inputValue)) {
-      setVal(inputValue);
+  const handleTitleChange = (e: ChangeEvent<HTMLInputElement>) => {
+    setTitle(e.target.value);
+  };
+
+  const handleDescriptionChange = (e: ChangeEvent<HTMLTextAreaElement>) => {
+    setDescription(e.target.value);
+  };
+
+  const handlePagesChange = (e: ChangeEvent<HTMLInputElement>) => {
+    if (/^\d{0,4}$/.test(e.target.value)) {
+      setPages(Number(e.target.value));
     }
+  };
+
+  const handleImageUrlChange = (e: ChangeEvent<HTMLInputElement>) => {
+    setImageUrl(e.target.value);
+  };
+
+  const handleUrlChange = (e: ChangeEvent<HTMLInputElement>) => {
+    setUrl(e.target.value);
   };
 
   return (
@@ -38,22 +66,27 @@ export default function AddBook() {
         <h1>Add Book</h1>
       </header>
       <div className='flex justify-center'>
-        <form className='flex gap-1 flex-col w-1/2 bg-slate-200 dark:bg-slate-700 rounded-xl p-4 mt-6'>
+        <form
+          className='flex gap-1 flex-col w-1/2 bg-slate-200 dark:bg-slate-700 rounded-xl p-4 mt-6'
+          onSubmit={handleFormSubmit}
+        >
           <input
             type='text'
+            value={title}
+            onChange={handleTitleChange}
             name='title'
             placeholder='Title'
             className='bg-slate-50 dark:bg-slate-600 px-2 py-1 rounded-t-xl outline-none'
           />
           <textarea
-            value={textarea}
+            value={description}
             placeholder='Description'
             onChange={handleDescriptionChange}
             className='bg-slate-50 dark:bg-slate-600 px-2 py-1 outline-none'
           />
           <input
             type='text'
-            value={val}
+            value={pages}
             onChange={handlePagesChange}
             name='pages'
             placeholder='Pages'
@@ -61,12 +94,16 @@ export default function AddBook() {
           />
           <input
             type='text'
+            value={imageUrl}
+            onChange={handleImageUrlChange}
             name='image'
             placeholder='Image URL'
             className='bg-slate-50 dark:bg-slate-600 px-2 py-1 outline-none'
           />
           <input
             type='text'
+            value={url}
+            onChange={handleUrlChange}
             name='url'
             placeholder='URL'
             className='bg-slate-50 dark:bg-slate-600 px-2 py-1 rounded-b-xl outline-none'
