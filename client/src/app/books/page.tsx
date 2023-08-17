@@ -2,6 +2,7 @@
 
 import Link from 'next/link';
 import { useEffect, useState } from 'react';
+import { getBooks } from '@/services/BookService';
 
 interface Book {
   id: number;
@@ -11,16 +12,10 @@ interface Book {
 export default function Catalogue() {
   const [books, setBooks] = useState<Book[]>([]);
 
-  const getBooks = function () {
-    fetch(`http://localhost:5172/api/Book/GetAll`)
-      .then((response) => response.json())
-      .then((data) => {
-        setBooks(data.data);
-      });
-  };
-
   useEffect(() => {
-    getBooks();
+    getBooks().then((data) => {
+      setBooks(data.data);
+    });
   }, []);
 
   return (
