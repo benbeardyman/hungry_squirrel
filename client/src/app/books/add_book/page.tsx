@@ -38,7 +38,7 @@ export default function AddBook() {
         <h1>Add Book</h1>
       </header>
       <div className='flex justify-center'>
-        <form className='flex gap-2 flex-col w-1/2 bg-slate-200 dark:bg-slate-700 rounded-xl p-6 mt-6'>
+        <form className='flex gap-1 flex-col w-1/2 bg-slate-200 dark:bg-slate-700 rounded-xl p-4 mt-6'>
           <input
             type='text'
             name='title'
@@ -74,13 +74,13 @@ export default function AddBook() {
           <div className='flex gap-1 justify-end'>
             <Link
               href='/books'
-              className='border-2 border-slate-800 dark:border-slate-100 px-2 py-1 rounded-lg hover:bg-slate-50 dark:hover:bg-slate-600 focus-within:bg-slate-50  dark:focus-within:bg-slate-600 outline-none'
+              className='border-2 border-slate-800 dark:border-slate-100 mt-2 px-4 py-1 rounded-lg hover:bg-slate-50 dark:hover:bg-slate-600 focus-within:bg-slate-50  dark:focus-within:bg-slate-600 outline-none'
             >
               Cancel
             </Link>
             <button
               type='submit'
-              className='border-2 border-slate-800 dark:border-slate-100  px-2 py-1 rounded-lg hover:bg-slate-50 dark:hover:bg-slate-600 focus-within:bg-slate-50  dark:focus-within:bg-slate-600 outline-none'
+              className='border-2 border-slate-800 dark:border-slate-100 mt-2 px-4 py-1 rounded-lg hover:bg-slate-50 dark:hover:bg-slate-600 focus-within:bg-slate-50  dark:focus-within:bg-slate-600 outline-none'
             >
               Add
             </button>

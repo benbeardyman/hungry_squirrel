@@ -11,7 +11,7 @@ interface Book {
 export default function Catalogue() {
   const [books, setBooks] = useState<Book[]>([]);
 
-  const fetchBooks = function () {
+  const getBooks = function () {
     fetch(`http://localhost:5172/api/Book/GetAll`)
       .then((response) => response.json())
       .then((data) => {
@@ -20,7 +20,7 @@ export default function Catalogue() {
   };
 
   useEffect(() => {
-    fetchBooks();
+    getBooks();
   }, []);
 
   return (
@@ -43,9 +43,14 @@ export default function Catalogue() {
         <h1>All Books</h1>
       </header>
       <div className='flex flex-col items-center ml-6 mt-8'>
-        <ul className='flex gap-6'>
+        <ul className='flex gap-4'>
           {books.map((book) => (
-            <li key={book.id}>Name: {book.title}</li>
+            <li
+              key={book.id}
+              className='flex justify-center bg-slate-200 dark:bg-slate-600 w-40 px-2 py-1 rounded-xl outline-none'
+            >
+              {book.title}
+            </li>
           ))}
         </ul>
         <div className='mt-6'>
