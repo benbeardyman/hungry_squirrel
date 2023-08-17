@@ -86,7 +86,7 @@ export default function AddBook() {
           />
           <input
             type='text'
-            value={pages}
+            value={pages === 0 ? '' : pages}
             onChange={handlePagesChange}
             name='pages'
             placeholder='Pages'
@@ -113,7 +113,7 @@ export default function AddBook() {
               href='/books'
               className='border-2 border-slate-800 dark:border-slate-100 mt-2 px-4 py-1 rounded-lg hover:bg-slate-50 dark:hover:bg-slate-600 focus-within:bg-slate-50  dark:focus-within:bg-slate-600 outline-none'
             >
-              Cancel
+              Reset
             </Link>
             <button
               type='submit'
